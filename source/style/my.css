@@ -1,0 +1,194 @@
+/* my.css */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+}
+
+.navbar,
+.footer {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+}
+
+.nav-link,
+.carousel-indicators [data-bs-target],
+.btn-outline-primary,
+.saitbar,
+footer {
+  transition: all 0.5s ease;
+}
+
+.nav-link:hover {
+  color: #4dd0e1;
+  transform: scale(1.1);
+}
+
+.carousel-item.active img {
+  transform: scale(1.05);
+  filter: brightness(80%);
+}
+
+.saitbar {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  color: #ffffff;
+  margin: 10px 0;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .fade-in {
+    animation: fadeIn 2s ease-in-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .rotate-icon {
+    animation: rotate 5s linear infinite;
+  }
+
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.btn-outline-primary:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+footer {
+  background-color: #212529;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+.nav-link {
+  transition: transform 0.2s, color 0.2s;
+}
+
+.nav-link:hover {
+  transform: translateY(-5px);
+  color: #ffd700;
+}
+
+/* Stiluri pentru butoane */
+.btn,
+.btn-outline-primary {
+  background-color: #6a11cb;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover,
+.btn-outline-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Animații pentru imagini și elemente din carousel */
+.carousel-item img {
+  transition: transform 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.carousel-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Animații suplimentare pentru secțiuni și elemente */
+section,
+.saitbar,
+footer {
+  opacity: 0;
+  animation: fadeInUp 1.2s forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+section:nth-child(1) {
+  animation-delay: 0.5s;
+}
+section:nth-child(2) {
+  animation-delay: 1s;
+}
+section:nth-child(3) {
+  animation-delay: 1.5s;
+}
+
+.saitbar {
+  animation-delay: 1.25s;
+}
+footer {
+  animation-delay: 1.5s;
+}
+button,
+.btn {
+  background-color: #ff4081; /* Fundal roz vibrant pentru butoane */
+  color: #ffffff; /* Text alb pentru butoane */
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover,
+.btn:hover {
+  background-color: #f06292; /* Schimbă culoarea de fundal la hover */
+  transform: translateY(-2px); /* Mic efect de "ridicare" la hover */
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 105, 135, 0.7);
+  }
+  70% {
+      box-shadow: 0 0 0 10px rgba(255, 105, 135, 0);
+  }
+  100% {
+      box-shadow: 0 0 0 0 rgba(255, 105, 135, 0);
+  }
+}
+
+button {
+  animation: pulse 1.5s infinite;
+}
+
+/* Efect de fade-in pentru elementele noi */
+.fade-in {
+  animation: fadeIn ease 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
